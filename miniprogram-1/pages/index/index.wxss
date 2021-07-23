@@ -1,5 +1,6 @@
 /**index.wxss**/
-.userinfo {
+
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,4 +17,13 @@
 
 .usermotto {
   margin-top: 200px;
+} */
+
+.xx-btn {
+  position: absolute;
+  width: 100px;
+  height: 240px;
+  right: 0;
+  background: none;
+  border: none;
 }

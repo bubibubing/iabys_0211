@@ -1,0 +1,18 @@
+<!--miniprogram-1/pages/displayCard/displayCard.wxml-->
+<view class="showCardPage">
+  <view class="gachaShowGif" style="display:{{isDisplay}}">
+    <image src="../image/gachashowsample.gif"></image>
+  </view>
+  
+  <view class="gachaShowCard" style="display:{{isCardFrontDisplay}}">
+    <image src="{{aaaa}}"></image>
+  </view>
+  <view class="cardBack" style="display:{{isCardBackDisplay}}">
+    <image src="../image/back.jpg"></image>
+  </view>
+
+  <!-- <button>合成</button> -->
+  <!-- <button class="return-btn" bindtap="returnHome">返回</button> -->
+  <button class="flip-btn" bindtap="flipCard">翻转卡片</button>
+</view>
+

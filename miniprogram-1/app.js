@@ -14,6 +14,16 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    currentAvatar: null,
+    hasAvatar1: false,
+    hasAvatar2: false,
+    hasAvatar3: false,
+    hasAvatar4: false,
+    hasAvatar5: false,
+    hasAvatar6: false,
+    hasAvatar7: false,
+    hasAvatar8: false,
+    hasAvatar9: false
   }
 })
