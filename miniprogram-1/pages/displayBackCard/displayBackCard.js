@@ -1,14 +1,6 @@
-// miniprogram-1/pages/displayCard/displayCard.js
+// miniprogram-1/pages/displayBackCard/displayBackCard.js
 const app = getApp();
-
-function randomBackPick(){
-  var n1 = Math.round(Math.random()*10);
-  var n2 = Math.round(Math.random()*10);
-  if(n1 <= 8){
-    app.globalData.hasQuestion = true;
-    app.globalData.questionNo = n2;
-  }
-}
+var backQuestion = new Array("Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10");
 
 Page({
 
@@ -16,25 +8,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isDisplay: 'block',
-    isCardFrontDisplay: 'flex',
-    isCardBackDisplay: 'none',
-    aaaa: ''
-
+    questionContent: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-    randomBackPick();
-    setTimeout((function callback(){
-      this.setData({ isDisplay: 'none'});
-    }).bind(this), 1000);
-
+  onLoad: function (options) {
     this.setData({
-      aaaa: "../image/" + app.globalData.currentAvatar + ".png"
+      hasQuestion: app.globalData.hasQuestion
     })
+  
+    console.log(app.globalData.hasQuestion);
+    console.log(app.globalData.questionNo);
+    if (app.globalData.hasQuestion) {
+      this.setData({
+        questionContent: backQuestion[app.globalData.questionNo]
+      }) 
+    }
+
   },
 
   /**
@@ -86,9 +78,9 @@ Page({
 
   },
 
-  flipCard() {
+  returnHome() {
     wx.navigateTo({
-      url: '../displayBackCard/displayBackCard'
+      url: '../index/index'
     })
   }
 })

@@ -16,6 +16,8 @@ App({
   globalData: {
     userInfo: null,
     currentAvatar: null,
+    questionNo: null,
+    hasQuestion: false,
     hasAvatar1: false,
     hasAvatar2: false,
     hasAvatar3: false,

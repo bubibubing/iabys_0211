@@ -1,1 +1,51 @@
 /* miniprogram-1/pages/displayCard/displayCard.wxss */
+.showCardPage {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  background: rgb(172, 223, 152);
+}
+
+.gachaShowGif {
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(128, 182, 121);
+  z-index: 999;
+}
+
+.gachaShowGif image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.gachaShowCard {
+  display:flex;
+  justify-content: center;
+  background: white;
+
+}
+
+.gachaShowCard image {
+  height: 480rpx;
+  width: 480rpx;
+  border: 10rpx solid white;
+}
+
+.flip-btn {
+  margin-top: 100rpx;
+  width: 500rpx;
+  border-radius:30px;
+}
