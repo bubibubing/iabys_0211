@@ -44,5 +44,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  toSelect() {
+    wx.navigateTo({
+      url: './../createAvatar/createAvatar'
+    })
   }
 })
