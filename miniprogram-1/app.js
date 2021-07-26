@@ -26,14 +26,15 @@ App({
     hasAvatar7: false,
     hasAvatar8: false,
     hasAvatar9: false,
+    questionAns: '',
     avatarImg: ['https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png', 
     'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341424626d53a553082c1f7.png',
     'https://s1.imagehub.cc/images/2021/07/25/mmexport1627203411540fbd0fbb61c09ecac.png',
     'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png',
     'https://s1.imagehub.cc/images/2021/07/25/avatar25a9aa3452355c5f6.png',
-    'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png', 
-    'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341424626d53a553082c1f7.png',
-    'https://s1.imagehub.cc/images/2021/07/25/mmexport1627203411540fbd0fbb61c09ecac.png',
+    'https://s1.imagehub.cc/images/2021/07/26/avatar6d32e70baac12ecb4.png', 
+    'https://s1.imagehub.cc/images/2021/07/26/avatar74315177b763269e6.png',
+    'https://s1.imagehub.cc/images/2021/07/26/avatar8e7753088e257698d.png',
     'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png'],
     sampleImg: 'https://s1.imagehub.cc/images/2021/07/26/008iYvyZgy1grj994mecyj303q03qdfr9f2cb22744c84ded.jpg'
   }

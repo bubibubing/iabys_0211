@@ -23,7 +23,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-    hiddenGachaShow: true
+    hiddenGachaShow: true,
+    borderArrImgs: app.globalData.avatarImg
   },
   // 事件处理函数
   bindViewTap() {
@@ -62,12 +63,24 @@ Page({
       hasUserInfo: true
     })
   },
+
   start() {
     wx.navigateTo({
-      url: '../displayCard/displayCard'})},
-  toSelect() {
+      url: '../displayCard/displayCard'
+    })
+  },
+
+  createAva() {
     wx.navigateTo({
-      url: './../createAvatar/createAvatar'
+      url: '../createBase/createBase'
+    })
+  },
+  //bindscroll事件
+  spikeScroll(e) {
+    let barW = (200/e.detail.scrollWidth)*wx.getSystemInfoSync().windowWidth
+    this.setData({
+        barW: barW,
+        percent: (200/e.detail.scrollWidth)*e.detail.scrollLeft
     })
   }
 })

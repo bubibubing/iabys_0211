@@ -1,22 +1,22 @@
 <!--index.wxml-->
 <view class="container">
   <view class="gacha">
-    <button class='xx-btn' bindtap="start"></button>
-    <image class="gacha-img" src="{{sampleImg}}" usemap="#Map"></image>
+    <image class="gacha-img" src="{{sampleImg}}" bindtap="start" usemap="#Map"></image>
   </view>
 
 
- <view class="slideryuliuspace">
-    slider预留space
-  </view> 
+  <view class="scroll-wrap">
+    <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
+      scroll-left="{{scrollLeft}}">
+      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"  data-url="{{item}}">
+        <image class="border-img" src="{{item}}" mode=""></image>
+      </view>
+    </scroll-view>
+  </view>
   
-  <button class="compositeImg">
+  <button class="compositeImg" bindtap="createAva">
     合成头像
   </button> 
 </view>
-<view class="flex">
-  <button class="weui-btn weui-btn_primary" style = "" bindtap = "toSelect">
-    主操作
-  </button>
-</view>
+
 

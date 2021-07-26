@@ -8,14 +8,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    questionContent: ''
+    questionContent: '',
+    isHidden: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     this.setData({
       sampleImg: getApp().globalData.sampleImg,
       hasQuestion: app.globalData.hasQuestion
@@ -83,6 +83,22 @@ Page({
   returnHome() {
     wx.navigateTo({
       url: '../index/index'
+    })
+  },
+
+  listenerText() {
+    this.setData({
+      isHidden: false
+    })
+  },
+
+  listenerInput: function(e) {
+    app.globalData.questionAns = e.detail.value;
+  },
+
+  compositeAvatarm() {
+    wx.navigateTo({
+      url: '../createBase/createBase'
     })
   }
 })

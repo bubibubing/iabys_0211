@@ -20,7 +20,7 @@ Page({
    */
   data: {
     percent: 0,       //滚动条距离左边的距离
-  barW: 0,          //滚动条的宽度
+    barW: 0,          //滚动条的宽度
     src: '',
     bgsrc: '',
     hasBorder:[],
@@ -58,7 +58,6 @@ Page({
   selectBorder(e){
     var that = this
 
-    console.log(e.currentTarget.dataset)
     if (!e.currentTarget.dataset.url){
       wx.showModal({
         title: '提示',

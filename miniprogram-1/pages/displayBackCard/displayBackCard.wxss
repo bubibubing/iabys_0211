@@ -1,5 +1,15 @@
 /* miniprogram-1/pages/displayBackCard/displayBackCard.wxss */
 
+.displayBackCard {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+
 .btn {
   margin-top: 100rpx;
   width: 500rpx;
@@ -8,4 +18,16 @@
 
 .btn::after {
   border: none; 
+}
+
+.questionArea {
+  display:flex;
+  justify-content: center;
+  background: white;
+}
+
+.questionArea image {
+  height: 480rpx;
+  width: 480rpx;
+  border: 10rpx solid white;
 }
