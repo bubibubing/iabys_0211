@@ -9,16 +9,9 @@ const app = getApp();
  * PS：思路比较清晰，但细节完善的不是很好，只能说能用吧。
  */
 
-var _tousList = [{
-  name: '类 型 1',
-  coverImgUrl: '../../images/pic_1.png'
-}, {
-    name: '类 型 2',
-  coverImgUrl: '../../images/pic_2.png'
-}
-]
 
-app.globalData.toubgsrc = _tousList[0].coverImgUrl
+
+app.globalData.toubgsrc = ''
 
 Page({
 
@@ -26,16 +19,26 @@ Page({
    * 页面的初始数据
    */
   data: {
+    percent: 0,       //滚动条距离左边的距离
+  barW: 0,          //滚动条的宽度
     src: '',
     bgsrc: '',
-    bgcss:'',
-    touList: _tousList,
+    hasBorder:[],
+    // bgcss:'',
+    // touList: _tousList,
     canvas: {
       width: null,
       height: null,
       background: 'rgb(255,255,255)'
     },
+    borderArrImgs:['https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png',
+      'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341424626d53a553082c1f7.png',
+      'https://s1.imagehub.cc/images/2021/07/25/mmexport1627203411540fbd0fbb61c09ecac.png',
+      'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png',
+      'https://s1.imagehub.cc/images/2021/07/25/avatar25a9aa3452355c5f6.png',
+      'https://s1.imagehub.cc/images/2021/07/25/avatar25a9aa3452355c5f6.png']
   },
+  
 
   //选择用户自己头像图片
   upload() {
@@ -51,6 +54,33 @@ Page({
         })
       }
     })
+  },
+  selectBorder(e){
+    var that = this
+
+    console.log(e.currentTarget.dataset)
+    if (!e.currentTarget.dataset.url){
+      wx.showModal({
+        title: '提示',
+        content: '头像框无法找到了哦!'
+      })
+    }else{
+      // 选择头像框路径 存入全局
+      app.globalData.toubgsrc = e.currentTarget.dataset.url
+      that.setData({
+        bgsrc: e.currentTarget.dataset.url
+        // bgcss:bgcss
+      });
+      wx.showToast({
+        title: '选择头像框成功',
+        icon:'none',
+        duration:1000,
+        // success:function(){
+        //   // 然后返回上一页
+        //   wx.navigateBack()
+        // }
+      })
+    }
   },
 
   //生成头像，即先画图像再画图像框
@@ -130,11 +160,11 @@ Page({
   },
   onLoad(option) {
     var that = this;
-    var bgcss = app.globalData.toubgsrc.substr(14, 2);
-    console.log(bgcss)
+    // var bgcss = app.globalData.toubgsrc.substr(14, 2);
+    // console.log(bgcss)
     that.setData({
       bgsrc: app.globalData.toubgsrc,
-      bgcss:bgcss
+      // bgcss:bgcss
     });
     // console.log(that.data.bgsrc);
     // console.log(that.data.bgcss);
@@ -144,5 +174,31 @@ Page({
         src: avatar
       });
     }
-  }
+  },
+  continue(){
+    app.globalData.toubgsrc = "https://s1.imagehub.cc/images/2021/07/25/mmexport1627203411540fbd0fbb61c09ecac.png"
+    console.log(app.globalData)
+  },
+  /* 计算滚动区域的宽度 */
+countCatWidth (){
+  var query = wx.createSelectorQuery();
+  //选择id
+  var that = this;
+  query.select('.scroll-item').boundingClientRect(function (rect) {
+    let sw = (rect.width+5)*that.data.catList.length+5
+    that.setData({
+      barW: (200/sw)*wx.getSystemInfoSync().windowWidth
+    })
+  }).exec();
+},
+//bindscroll事件
+spikeScroll(e) {
+  console.log(e.detail)
+  let barW = (200/e.detail.scrollWidth)*wx.getSystemInfoSync().windowWidth
+  this.setData({
+      barW: barW,
+      percent: (200/e.detail.scrollWidth)*e.detail.scrollLeft
+  })
+},
 })
+

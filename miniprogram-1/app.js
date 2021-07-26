@@ -15,8 +15,14 @@ App({
   },
   globalData: {
     userInfo: null,
-    hasAvatar1: true,
+    hasBorder:{hasAvatar1: true,
     hasAvatar2: false,
+    hasAvatar3: false,
+    hasAvatar4: true,
+    hasAvatar5: false,
+    hasAvatar6: true,
+    hasAvatar7: false,
+    hasAvatar8: false,}
   }
 
 })
