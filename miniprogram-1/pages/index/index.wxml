@@ -1,35 +1,22 @@
 <!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="container">
+  <view class="gacha">
+    <button class='xx-btn' bindtap="start"></button>
+    <image class="gacha-img" src="../image/sample1.jpg" usemap="#Map"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
 
-<view>
-  <button class="weui-btn weui-btn_primary">
+
+ <view class="slideryuliuspace">
+    slider预留space
+  </view> 
+  
+  <button class="compositeImg">
+    合成
+  </button> 
+</view>
+<view class="flex">
+  <button class="weui-btn weui-btn_primary" style = "" bindtap = "toSelect">
     主操作
   </button>
-  <button class="weui-btn weui-btn_primary weui-btn_loading">
-    <i class="weui-loading"></i>正在加载
-  </button>
-  <button class="weui-btn weui-btn_primary weui-btn_disabled">
-    禁止点击
-  </button>
 </view>
+

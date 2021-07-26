@@ -1,0 +1,25 @@
+<!--miniprogram-1/pages/displayBackCard/displayBackCard.wxml-->
+<view class="displayBackCard">
+  <view class="questionArea">
+    <text>{{questionContent}}</text>
+  </view>
+  <view class="">
+  </view>
+
+
+
+  <block wx:if="{{hasQuestion}}">
+    <view class="questionArea">
+      <image class="notDisplayQ" src="../image/sample1.jpg"></image>
+      <text>{{questionContent}}</text>
+    </view>
+    <view class="enterText">
+      <input type='text' placeholder="这是一个可以自动聚焦的input" />
+    </view>
+  </block>
+  <block wx:else>
+    <image class="displayQ" src="../image/sample1.jpg"></image>
+    <button bindtap="compositeAvatarm">合成头像</button>
+    <button bindtap="returnHome">返回首页</button>
+  </block>
+</view>
