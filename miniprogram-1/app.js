@@ -13,8 +13,7 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null,
+  globalData: {userInfo: null,
     currentAvatar: null,
     questionNo: null,
     hasQuestion: false,
@@ -38,4 +37,5 @@ App({
     'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png'],
     sampleImg: 'https://s1.imagehub.cc/images/2021/07/26/008iYvyZgy1grj994mecyj303q03qdfr9f2cb22744c84ded.jpg'
   }
+
 })

@@ -62,10 +62,12 @@ Page({
       hasUserInfo: true
     })
   },
-
   start() {
     wx.navigateTo({
-      url: '../displayCard/displayCard'
+      url: '../displayCard/displayCard'})},
+  toSelect() {
+    wx.navigateTo({
+      url: './../createAvatar/createAvatar'
     })
   }
 })
