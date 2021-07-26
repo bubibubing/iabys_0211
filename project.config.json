@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -40,8 +40,8 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.18.1",
-  "appid": "wx4c3f4106231aa476",
-  "miniprogramRoot": "./miniprogram-1",
+  "appid": "wx347aba49b327a6b8",
+  "miniprogramRoot": "miniprogram-1/",
   "projectname": "miniprogram-1",
   "cloudfunctionTemplateRoot": "",
   "watchOptions": {

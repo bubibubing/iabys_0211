@@ -1,1 +1,11 @@
 /* miniprogram-1/pages/displayBackCard/displayBackCard.wxss */
+
+.btn {
+  margin-top: 100rpx;
+  width: 500rpx;
+  border-radius:30px;
+}
+
+.btn::after {
+  border: none; 
+}

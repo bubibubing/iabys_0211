@@ -2,7 +2,7 @@
 <view class="container">
   <view class="gacha">
     <button class='xx-btn' bindtap="start"></button>
-    <image class="gacha-img" src="../image/sample1.jpg" usemap="#Map"></image>
+    <image class="gacha-img" src="{{sampleImg}}" usemap="#Map"></image>
   </view>
 
  <view class="slideryuliuspace">
@@ -10,7 +10,7 @@
   </view> 
   
   <button class="compositeImg">
-    合成
+    合成头像
   </button> 
 
 </view>

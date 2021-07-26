@@ -32,18 +32,14 @@ Page({
     })
   },
   onLoad() {
+    this.setData({
+      sampleImg:getApp().globalData.sampleImg})
     randomPick();
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
-
-    console.log(app.globalData.currentAvatar);
-
-    // getApp().globalData.name = "王二麻子";
-    // getApp().globalData.favorite = "集邮";
-
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
@@ -68,17 +64,6 @@ Page({
   },
 
   start() {
-    // var animation = wx.createAnimation({
-    //   duration: 4000,
-    //   delay: 1000
-    //  });
-    //  animation.opacity(1).step()
-    //  this.setData({
-    //   hiddenGachaShow:!this.data.hiddenGachaShow,
-    //   ani: animation.export()
-      
-    //  })
-
     wx.navigateTo({
       url: '../displayCard/displayCard'
     })

@@ -1,24 +1,5 @@
 /**index.wxss**/
 
-/* .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
-}
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.usermotto {
-  margin-top: 200px;
-} */
-
 .xx-btn {
   position: absolute;
   width: 100px;
@@ -26,4 +7,14 @@
   right: 0;
   background: none;
   border: none;
+}
+
+.compositeImg {
+  margin-top: 100rpx;
+  width: 500rpx;
+  border-radius: 30px;
+}
+
+.compositeImg::after {
+  border: none; 
 }

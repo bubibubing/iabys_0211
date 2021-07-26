@@ -33,7 +33,7 @@ Page({
     }).bind(this), 1000);
 
     this.setData({
-      aaaa: "../image/" + app.globalData.currentAvatar + ".png"
+      aaaa: app.globalData.avatarImg[app.globalData.currentAvatar - 1]
     })
   },
 

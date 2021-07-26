@@ -6,8 +6,6 @@
   <view class="">
   </view>
 
-
-
   <block wx:if="{{hasQuestion}}">
     <view class="questionArea">
       <image class="notDisplayQ" src="../image/sample1.jpg"></image>
@@ -18,8 +16,8 @@
     </view>
   </block>
   <block wx:else>
-    <image class="displayQ" src="../image/sample1.jpg"></image>
-    <button bindtap="compositeAvatarm">合成头像</button>
-    <button bindtap="returnHome">返回首页</button>
+    <image class="displayQ" src="{{sampleImg}}"></image>
+    <button bindtap="compositeAvatarm btn">合成头像</button>
+    <button bindtap="returnHome btn">返回首页</button>
   </block>
 </view>
