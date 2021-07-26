@@ -5,6 +5,7 @@
     <image class="gacha-img" src="../image/sample1.jpg" usemap="#Map"></image>
   </view>
 
+
  <view class="slideryuliuspace">
     slider预留space
   </view> 
@@ -12,5 +13,10 @@
   <button class="compositeImg">
     合成
   </button> 
-
 </view>
+<view class="flex">
+  <button class="weui-btn weui-btn_primary" style = "" bindtap = "toSelect">
+    主操作
+  </button>
+</view>
+

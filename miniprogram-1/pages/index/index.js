@@ -66,7 +66,6 @@ Page({
       hasUserInfo: true
     })
   },
-
   start() {
     // var animation = wx.createAnimation({
     //   duration: 4000,
@@ -80,7 +79,10 @@ Page({
     //  })
 
     wx.navigateTo({
-      url: '../displayCard/displayCard'
+      url: '../displayCard/displayCard'})},
+  toSelect() {
+    wx.navigateTo({
+      url: './../createAvatar/createAvatar'
     })
   }
 })
