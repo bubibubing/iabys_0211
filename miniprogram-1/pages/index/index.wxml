@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <view class="gacha">
-    <image class="gacha-img" src="{{sampleImg}}" bindtap="start" usemap="#Map"></image>
+    <image class="gacha-img notMove" src="{{sampleImg}}" bindtap="start"></image>
+    <image class="gacha-img isMove" src="../image/gachashowsample.gif" style="display:{{gachaIsMove}}"></image>
   </view>
 
 

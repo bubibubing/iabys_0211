@@ -33,12 +33,21 @@
   display:flex;
   justify-content: center;
   background: white;
+  height: 480rpx;
 }
 
 .gacga image {
   height: 480rpx;
   width: 480rpx;
   border: 10rpx solid white;
+}
+
+.notMove {
+  position: absolute;
+}
+
+.isMove {
+  z-index: 100;
 }
 
 
