@@ -35,7 +35,6 @@
   display:flex;
   justify-content: center;
   background: white;
-
 }
 
 .gachaShowCard image {

@@ -23,7 +23,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-    hiddenGachaShow: true
+    hiddenGachaShow: true,
+    borderArrImgs: app.globalData.avatarImg,
+    gachaIsMove: 'none'
   },
   // 事件处理函数
   bindViewTap() {
@@ -31,6 +33,7 @@ Page({
       url: '../logs/logs'
     })
   },
+
   onLoad() {
     this.setData({
       sampleImg:getApp().globalData.sampleImg})
@@ -41,6 +44,13 @@ Page({
       })
     }
   },
+
+  onHide() {
+    this.setData({
+      gachaIsMove: 'none'
+   })
+  },
+
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
@@ -62,12 +72,27 @@ Page({
       hasUserInfo: true
     })
   },
+
   start() {
+    this.setData({
+       gachaIsMove: 'block'
+    })
+    
+    setTimeout(function() {wx.navigateTo({ url: '../displayCard/displayCard' })}, 2000);
+    // wx.navigateTo({ url: '../displayCard/displayCard' })
+  },
+
+  createAva() {
     wx.navigateTo({
-      url: '../displayCard/displayCard'})},
-  toSelect() {
-    wx.navigateTo({
-      url: './../createAvatar/createAvatar'
+      url: '../createBase/createBase'
+    })
+  },
+  //bindscroll事件
+  spikeScroll(e) {
+    let barW = (200/e.detail.scrollWidth)*wx.getSystemInfoSync().windowWidth
+    this.setData({
+        barW: barW,
+        percent: (200/e.detail.scrollWidth)*e.detail.scrollLeft
     })
   }
 })

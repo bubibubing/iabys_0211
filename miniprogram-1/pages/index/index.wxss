@@ -1,4 +1,14 @@
 /**index.wxss**/
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  background: rgb(172, 223, 152);
+}
 
 .xx-btn {
   position: absolute;
@@ -17,4 +27,284 @@
 
 .compositeImg::after {
   border: none; 
+}
+
+.gacha {
+  display:flex;
+  justify-content: center;
+  background: white;
+  height: 480rpx;
+}
+
+.gacga image {
+  height: 480rpx;
+  width: 480rpx;
+  border: 10rpx solid white;
+}
+
+.notMove {
+  position: absolute;
+}
+
+.isMove {
+  z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cropper-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+
+.cropper-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.cropper-buttons .upload,
+.cropper-buttons .getCropperImage {
+  width: 50%;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.avatar-container {
+  position: relative;
+  text-align: center;
+  padding-top: 50%;
+}
+
+
+.avatar {
+  /* width: 6.25rem;
+  height: 6.25rem; */
+  width: 240px;
+  height: 240px;
+  /* border-radius: 50%; */
+  /* position: absolute; */
+  /* z-index: 2; */
+  /* top: 18%;
+  left: 19%; */
+  /* top: 24%;
+  left: 25%; */
+}
+
+.bgcss {
+  width: 240px;
+  height: 240px;
+  /* .user-border-img{ */
+    /* width:300rpx;
+    height:300rpx; */
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  
+  /* z-index: 10; */
+  /* background-color: transparent; */
+}
+.user-border-img{
+  width: 10rem;
+  height: 10rem;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.user-img{
+  width:10rem;
+  height:10rem;
+  background:rgb(245,245,245);
+}
+.h1 {
+  width: 6.25rem;
+  height: 6.25rem;
+  top: 19%;
+  left: 19%;
+
+}
+
+.h2 {
+  width: 5.75rem;
+  height: 5.75rem;
+  top: 19.5%;
+  left: 20%;
+}
+
+.h3 {
+  width: 6.2rem;
+  height: 6.2rem;
+  top: 18.5%;
+  left: 19%;
+}
+
+.h5 {
+  width: 4.8rem;
+  height: 4.8rem;
+  top: 26%;
+  left: 26%;
+}
+
+.h6 {
+  width: 6.35rem;
+  height: 6.35rem;
+  top: 18.5%;
+  left: 19%;
+
+}
+
+
+/* .item {
+  line-height: 3rem;
+  width: 10rem;
+} */
+
+.bg {
+  /* width: 10rem;
+  height: 10rem; */
+  text-align: center;
+  position: relative;
+  margin:auto;
+  border:yellowgreen 1px solid;
+}
+.hidden-canvas{
+  position:fixed;
+  bottom:-1000px;
+}
+
+.create-avatar-page{
+  display: flex;
+  flex-direction: column;
+  padding: 10 rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.button-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.create-btn{
+  width:8rem;
+  font-size: 10px !important;
+  /* margin-left:; */
+  /* padding: 0 24rpx 27rpx; */
+  /* margin-left: 10px; */
+}
+
+
+
+.border-img{
+  width: 100%;
+  height: 100%;
+}
+
+.select-border-page{
+  /* position: fixed; */
+  /* top: 150rpx; */
+  /* left: 0;
+  right: 0;
+  bottom: 0; */
+  width: 100%;
+  max-width:400px;
+  white-space: nowrap;  
+  /* display: flex;
+  flex-direction: row;
+  overflow: auto; */
+}
+.select-border-page .border-img-con{
+  /* width: 120px !important; */
+  height: 8rem;
+  width:8rem;
+  display: inline-block;
+}
+scroll-view {
+  width: 100%;
+  white-space: nowrap; 
+}
+
+
+
+
+.scroll-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.scroll {
+  height: 100%;
+  box-sizing: border-box;
+}
+.scroll-x {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.scroll-item {
+  /* width: 138rpx; */
+  height: 8rem;
+  width:8rem;
+  display: inline-block;
+  margin-right: 10rpx;
+  padding: 0 24rpx 27rpx;
+  font-size: 24rpx;
+  color: #4e4e4e;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+.scroll-bar {
+  background: #ffffff;
+}
+.scroll-bar__bg {
+  position: relative;
+  width: 200rpx;
+  height: 6rpx;
+  background: #d4d8dd;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.scroll-bar__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(233, 89, 14, 1);
+  border-radius: 5px;
 }

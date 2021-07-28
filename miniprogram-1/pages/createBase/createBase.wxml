@@ -1,0 +1,6 @@
+<!--miniprogram-1/pages/createBase/createBase.wxml-->
+<view class="flex">
+  <button class="weui-btn weui-btn_primary" style = "" bindtap = "toSelect">
+    主操作
+  </button>
+</view>
