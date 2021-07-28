@@ -15,9 +15,9 @@
     </scroll-view>
   </view>
   
-  <button class="compositeImg" bindtap="createAva">
+  <!-- <button class="compositeImg" bindtap="createAva">
     合成头像
-  </button> 
+  </button>  -->
 </view>
 
 

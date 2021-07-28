@@ -65,7 +65,7 @@ Page({
   },
   
   toSelect() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: './../createAvatar/createAvatar'
     })
   }

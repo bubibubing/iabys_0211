@@ -28,3 +28,13 @@ page {
     justify-content: center;
     align-items: center;
 }
+
+.flip-btn {
+  margin-top: 100rpx;
+  width: 500rpx;
+  border-radius:30px;
+}
+
+.flip-btn::after {
+  border: none; 
+}

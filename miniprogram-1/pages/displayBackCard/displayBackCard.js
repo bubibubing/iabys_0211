@@ -97,7 +97,7 @@ Page({
   },
 
   compositeAvatarm() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../createBase/createBase'
     })
   }

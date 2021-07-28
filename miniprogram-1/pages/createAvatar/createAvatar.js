@@ -41,11 +41,11 @@ Page({
     distributionCode: '',
     imageBill: '',
     isWeChatAvatarUrl:true, // true微信头像   false自定义头像
-    borderArrImgs: app.globalData.avatarImg
+    borderArrImgs: app.globalData.avatarImgList
   },
-  getImgList(){
-    app.globalData['has']
-  },
+  // getImgList(){
+  //   app.globalData['has']
+  // },
   //选择用户自己头像图片
   upload() {
     wx.chooseImage({
@@ -55,7 +55,7 @@ Page({
       success(res) {
         const src = res.tempFilePaths[0]
         //将选择的图传至upload页处理
-        wx.navigateTo({
+        wx.redirectTo({
           url: `../upload/upload?src=${src}`
         })
       }
@@ -166,10 +166,12 @@ Page({
   },
   onLoad(option) {
     var that = this;
+    console.log(app.globalData.avatarImgList)
     // var bgcss = app.globalData.toubgsrc.substr(14, 2);
     // console.log(bgcss)
     that.setData({
       bgsrc: app.globalData.toubgsrc,
+      borderArrImgs: app.globalData.avatarImgList
       // bgcss:bgcss
     });
     // console.log(that.data.bgsrc);
@@ -186,8 +188,8 @@ Page({
   continue () {
     app.globalData.toubgsrc = "https://s1.imagehub.cc/images/2021/07/25/mmexport1627203411540fbd0fbb61c09ecac.png"
     console.log(app.globalData)
-    wx.navigateTo({
-      url: './../displayCard/displayCard'
+    wx.redirectTo({
+      url: './../index/index'
     })
   },
   /* 计算滚动区域的宽度 */
@@ -330,7 +332,7 @@ Page({
   },
 
   toMainPage() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: './../index/index'
     })
   }

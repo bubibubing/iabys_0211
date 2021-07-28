@@ -4,20 +4,21 @@
 <view class="container">
   <view class="create-avatar-page">
     <view class='bg' bindtap="upload">
-    <view wx:if="{{!src}}">点击添加</view>
+      <view wx:if="{{!src}}">点击上传照片</view>
       <image src="{{src}}" class="avatar"></image>
       <image src="{{bgsrc}}" class="bgcss">
       </image>
     </view>
-    <view class="button-row">
-      <button class=' create-btn item flex' bindtap='savePhoto'>生成头像</button>
-      <button class=' create-btn item flex' bindtap='continue'>继续抽卡</button>
+    <view class="">
+      <button class=' flip-button create-btn' bindtap='savePhoto'>生成头像</button>
+      <button class=' flip-button create-btn' bindtap='continue'>继续抽卡</button>
     </view>
   </view>
   <view class="border-title">
     <view>点击选择一张你喜欢的头像框啦!</view>
     <view wx:if="{{title}}">{{title}}</view>
   </view>
+
   <!-- <scroll-view style="padding:10px" scroll-x="true" show-scrollbar="true" class="select-border-page">
     <view class="border-img-con" wx:for="{{borderArrImgs}}" wx:key="{{borderImgIndex}}"
       wx:for-index="{{borderImgIndex}}" data-url="{{item}}" bindtap="selectBorder">
@@ -36,9 +37,11 @@
   <view class="scroll-wrap">
     <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
       scroll-left="{{scrollLeft}}">
-      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"  data-url="{{item}}">
-          <image class="border-img" src="{{item}}" mode=""></image>
-        </view>
+      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"
+        wx:if="{{item.hasAvatar}}" data-url="{{item.url}}">
+        <image class="border-img" src="{{item.url}}" mode=""></image>
+        <view>{{item.hasAvatar}}</view>
+      </view>
     </scroll-view>
   </view>
   <!-- 滚动条区域 -->

@@ -35,6 +35,7 @@ Page({
     this.setData({
       aaaa: app.globalData.avatarImg[app.globalData.currentAvatar - 1]
     })
+    app.globalData.avatarImgList[app.globalData.currentAvatar - 1].hasAvatar = true
   },
 
   /**
@@ -87,18 +88,19 @@ Page({
   },
 
   flipCard() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../displayBackCard/displayBackCard'
     })
   },
   toSelect() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: './../createAvatar/createAvatar'
     })
+    console.log(app.globalData.avatarImgList)
   },
   toMainPage() {
     console.log(app.globalData)
-    wx.navigateTo({
+    wx.redirectTo({
       url: './../index/index'
     })
   }
