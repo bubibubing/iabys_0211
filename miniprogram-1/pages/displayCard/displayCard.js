@@ -90,5 +90,16 @@ Page({
     wx.navigateTo({
       url: '../displayBackCard/displayBackCard'
     })
+  },
+  toSelect() {
+    wx.navigateTo({
+      url: './../createAvatar/createAvatar'
+    })
+  },
+  toMainPage() {
+    console.log(app.globalData)
+    wx.navigateTo({
+      url: './../index/index'
+    })
   }
 })

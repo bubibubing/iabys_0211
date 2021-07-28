@@ -10,7 +10,7 @@
       </image>
     </view>
     <view class="button-row">
-      <button class=' create-btn item flex' bindtap='generate'>生成头像</button>
+      <button class=' create-btn item flex' bindtap='savePhoto'>生成头像</button>
       <button class=' create-btn item flex' bindtap='continue'>继续抽卡</button>
     </view>
   </view>
