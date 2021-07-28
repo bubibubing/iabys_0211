@@ -1,12 +1,17 @@
 <!--miniprogram-1/pages/displayBackCard/displayBackCard.wxml-->
 <view class="displayBackCard">
   <block wx:if="{{hasQuestion}}">
-    <view class="questionArea">
-      <image class="notDisplayQ" src="https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png"></image>
-      <text>{{questionContent}}</text>
+    <view class="qaArea">
+      <view class="questionArea {{scale_q}} ">
+        <image class="displayQ" src="https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png"></image>
+        <text>{{questionContent}}</text>
+      </view>
+      <view class="rightAnsArea" hidden="{{isHidden}}">
+        <text>正确答案：\n{{answerContent}}</text>
+      </view>
     </view>
     <view class="enterText">
-      <input type='text' placeholder="这是一个可以自动聚焦的input"  bindinput="listenerInput"/>
+      <input type='text' hidden="{{!isHidden}}" placeholder="请输入正确答案" placeholder-class="t_center" bindinput="listenerInput"/>
     </view>
     <button class="btn" hidden="{{!isHidden}}" type="primary" bindtap="listenerText">答案确认</button>
     <button class="btn" hidden="{{isHidden}}" type="primary" bindtap="compositeAvatarm">合成头像</button>
@@ -14,7 +19,7 @@
 
   </block>
   <block wx:else>
-    <image class="displayQ" src="{{sampleImg}}"></image>
+    <image class="notDisplayQ" src="{{sampleImg}}"></image>
     <button class="compositeAvatarm btn" bindtap="compositeAvatarm">合成头像</button>
     <button class="returnHome btn" bindtap="returnHome">返回首页</button>
   </block>

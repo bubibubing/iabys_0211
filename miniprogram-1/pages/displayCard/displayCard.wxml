@@ -9,7 +9,5 @@
   </view>
 
   <button class="flip-btn" bindtap="flipCard">翻转卡片</button>
-  <button class="flip-btn" bindtap = "toSelect">合成头像</button>
-  <button class="flip-btn" bindtap = "toMainPage">继续抽卡</button>
 </view>
 

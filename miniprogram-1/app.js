@@ -16,6 +16,7 @@ App({
   globalData: {userInfo: null,
     currentAvatar: null,
     questionNo: null,
+    hasQuestion: false,
     questionAns: '',
     avatarImg: ['https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png', 
     'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341424626d53a553082c1f7.png',

@@ -24,10 +24,48 @@
   display:flex;
   justify-content: center;
   background: white;
+  height: 520rpx;
+  width: 500rpx;
 }
 
 .questionArea image {
-  height: 480rpx;
-  width: 480rpx;
-  border: 10rpx solid white;
+  position: absolute;
+  height: 520rpx;
+  width: 500rpx;
+}
+
+.questionArea text {
+  z-index: 99;
+  font-size: 35rpx;
+  margin: 100rpx 50rpx;
+}
+
+.enterText input {
+  border: 1px solid lightgray;
+  width: 500rpx;
+  height: 50rpx;
+  margin-top: 100rpx;
+  border-radius: 5px;
+  font-size: 35rpx;
+}
+
+.t_center {
+  text-align: center;
+}
+
+.scale_q {
+  transform: translate(-100rpx, -150rpx) scale(0.35);
+  position: absolute;
+}
+
+.rightAnsArea {
+  display:flex;
+  height: 520rpx;
+  width: 500rpx;
+}
+
+.rightAnsArea text {
+  z-index: 99;
+  font-size: 35rpx;
+  margin: auto;
 }

@@ -6,18 +6,28 @@
   </view>
 
 
-  <view class="scroll-wrap">
+  <!-- <view class="scroll-wrap">
     <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
       scroll-left="{{scrollLeft}}">
       <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"  data-url="{{item}}">
         <image class="border-img" src="{{item}}" mode=""></image>
       </view>
     </scroll-view>
+  </view> -->
+  <view class="scroll-wrap">
+    <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
+      scroll-left="{{scrollLeft}}">
+      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"
+        wx:if="{{item.hasAvatar}}" data-url="{{item.url}}">
+        <image class="border-img" src="{{item.url}}" mode=""></image>
+        <view>{{item.hasAvatar}}</view>
+      </view>
+    </scroll-view>
   </view>
   
-  <!-- <button class="compositeImg" bindtap="createAva">
+  <button class="compositeImg" bindtap="createAva">
     合成头像
-  </button>  -->
+  </button>
 </view>
 
 

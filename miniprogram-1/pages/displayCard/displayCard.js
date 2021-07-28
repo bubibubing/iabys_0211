@@ -2,8 +2,8 @@
 const app = getApp();
 
 function randomBackPick(){
-  var n1 = Math.round(Math.random()*10);
-  var n2 = Math.round(Math.random()*10);
+  var n1 = Math.floor(Math.random()*10+1);
+  var n2 = Math.floor(Math.random()*10+1);
   if(n1 <= 8){
     app.globalData.hasQuestion = true;
     app.globalData.questionNo = n2;
