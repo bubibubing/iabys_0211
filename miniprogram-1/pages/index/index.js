@@ -35,9 +35,10 @@ Page({
   },
 
   onLoad() {
-    console.log(app.globalData.avatarImgList)
     this.setData({
-      sampleImg:getApp().globalData.sampleImg})
+      borderArrImgs: app.globalData.avatarImgList
+      // sampleImg:getApp().globalData.sampleImg
+    })
     randomPick();
     if (wx.getUserProfile) {
       this.setData({
