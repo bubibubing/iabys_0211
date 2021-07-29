@@ -4,8 +4,7 @@
     "pages/logs/logs",
     "pages/displayCard/displayCard",
     "pages/displayBackCard/displayBackCard",
-    "pages/createAvatar/createAvatar",
-    "pages/createBase/createBase"
+    "pages/createAvatar/createAvatar"
   ],
   "window": {
     "backgroundTextStyle": "light",

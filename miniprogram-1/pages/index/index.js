@@ -80,7 +80,7 @@ Page({
 
   createAva() {
     wx.navigateTo({
-      url: '../createBase/createBase'
+      url: '../createAvatar/createAvatar'
     })
   },
   //bindscroll事件
