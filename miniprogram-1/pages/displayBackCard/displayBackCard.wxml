@@ -1,25 +1,25 @@
 <!--miniprogram-1/pages/displayBackCard/displayBackCard.wxml-->
-<view class="displayBackCard">
+<view class="displayBackCard" style="background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
   <block wx:if="{{hasQuestion}}">
     <view class="qaArea">
       <view class="questionArea {{scale_q}} ">
-        <image class="displayQ" src="https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png"></image>
+        <image class="displayQ" src="https://s1.imagehub.cc/images/2021/07/29/cardBack18fd02ec277a7dbe8.png"></image>
         <text>{{questionContent}}</text>
       </view>
       <view class="rightAnsArea" hidden="{{isHidden}}">
-        <text>正确答案：\n{{answerContent}}</text>
+        <image class="displayQ" src="https://s1.imagehub.cc/images/2021/07/29/cardBack18fd02ec277a7dbe8.png"></image>
+        <text>正确答案:\n{{answerContent}}</text>
       </view>
     </view>
     <view class="enterText">
       <input type='text' hidden="{{!isHidden}}" placeholder="请输入正确答案" placeholder-class="t_center" bindinput="listenerInput"/>
     </view>
-    <button class="btn" hidden="{{!isHidden}}" type="primary" bindtap="listenerText">答案确认</button>
-    <button class="btn" hidden="{{isHidden}}" type="primary" bindtap="compositeAvatarm">合成头像</button>
-    <button class="btn" hidden="{{isHidden}}" type="primary" bindtap="returnHome">返回首页 </button>
-
+    <button class="btn" hidden="{{!isHidden}}" bindtap="listenerText">答案确认</button>
+    <button class="btn" hidden="{{isHidden}}" bindtap="compositeAvatarm">合成头像</button>
+    <button class="btn" hidden="{{isHidden}}" bindtap="returnHome">返回首页 </button>
   </block>
   <block wx:else>
-    <image class="notDisplayQ" src="{{sampleImg}}"></image>
+    <image class="notDisplayQ" src="https://s1.imagehub.cc/images/2021/07/29/cardBack22c149d09038e9bc0.png"></image>
     <button class="compositeAvatarm btn" bindtap="compositeAvatarm">合成头像</button>
     <button class="returnHome btn" bindtap="returnHome">返回首页</button>
   </block>

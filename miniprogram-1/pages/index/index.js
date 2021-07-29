@@ -75,12 +75,7 @@ Page({
   },
 
   start() {
-    this.setData({
-       gachaIsMove: 'block'
-    })
-    
-    setTimeout(function() {wx.navigateTo({ url: '../displayCard/displayCard' })}, 2000);
-    // wx.navigateTo({ url: '../displayCard/displayCard' })
+    wx.navigateTo({ url: '../displayCard/displayCard' })
   },
 
   createAva() {

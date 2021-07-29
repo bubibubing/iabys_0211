@@ -35,8 +35,6 @@ App({
      {url:'https://s1.imagehub.cc/images/2021/07/26/avatar6d32e70baac12ecb4.png', hasAvatar:false}, 
      {url:'https://s1.imagehub.cc/images/2021/07/26/avatar74315177b763269e6.png', hasAvatar:false},
      {url:'https://s1.imagehub.cc/images/2021/07/26/avatar8e7753088e257698d.png', hasAvatar:false},
-     {url:'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png', hasAvatar:false}],
-    sampleImg: 'https://s1.imagehub.cc/images/2021/07/26/008iYvyZgy1grj994mecyj303q03qdfr9f2cb22744c84ded.jpg'
+     {url:'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png', hasAvatar:false}]
   }
-
 })

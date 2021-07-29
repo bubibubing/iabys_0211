@@ -31,7 +31,7 @@ page {
 
 .flip-btn {
   margin-top: 100rpx;
-  width: 500rpx;
+  width: 520rpx;
   border-radius:30px;
 }
 

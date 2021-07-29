@@ -1,4 +1,8 @@
 /* pages/createAvatar/createAvatar.wxss */
+.container {
+  background-size: 100% 100%;
+}
+
 .cropper-wrapper {
   position: relative;
   display: flex;

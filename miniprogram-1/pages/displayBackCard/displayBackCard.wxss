@@ -8,12 +8,14 @@
   flex-direction:column;
   align-items:center;/*垂直居中*/
   justify-content: center;/*水平居中*/
+  background-size: 100% 100%;
 }
 
 .btn {
   margin-top: 100rpx;
-  width: 500rpx;
+  width: 520rpx;
   border-radius:30px;
+  background: rgb(128, 192, 165);
 }
 
 .btn::after {
@@ -24,25 +26,26 @@
   display:flex;
   justify-content: center;
   background: white;
-  height: 520rpx;
-  width: 500rpx;
+  height: 500rpx;
+  width: 520rpx;
 }
 
 .questionArea image {
   position: absolute;
-  height: 520rpx;
-  width: 500rpx;
+  height: 500rpx;
+  width: 520rpx;
 }
 
 .questionArea text {
   z-index: 99;
   font-size: 35rpx;
-  margin: 100rpx 50rpx;
+  margin: auto 80rpx;
+  text-align: center;
 }
 
 .enterText input {
   border: 1px solid lightgray;
-  width: 500rpx;
+  width: 520rpx;
   height: 50rpx;
   margin-top: 100rpx;
   border-radius: 5px;
@@ -54,18 +57,32 @@
 }
 
 .scale_q {
-  transform: translate(-100rpx, -150rpx) scale(0.35);
+  transform: translate(-170rpx, -160rpx) scale(0.35);
   position: absolute;
 }
 
 .rightAnsArea {
   display:flex;
-  height: 520rpx;
-  width: 500rpx;
+  height: 500rpx;
+  width: 520rpx;
+}
+
+.rightAnsArea image {
+  position: absolute;
+  height: 500rpx;
+  width: 520rpx;
+  background: white;
+  z-index: -100;
 }
 
 .rightAnsArea text {
   z-index: 99;
   font-size: 35rpx;
   margin: auto;
+  text-align: center;
+}
+
+.notDisplayQ {
+  height: 500rpx;
+  width: 520rpx;
 }

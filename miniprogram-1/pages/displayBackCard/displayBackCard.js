@@ -29,7 +29,6 @@ Page({
   onLoad: function (options) {
     console.log(app.globalData.questionNo)
     this.setData({
-      sampleImg: getApp().globalData.sampleImg,
       hasQuestion: app.globalData.hasQuestion
     })
   

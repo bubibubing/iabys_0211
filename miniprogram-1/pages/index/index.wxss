@@ -7,7 +7,7 @@
   flex-direction:column;
   align-items:center;/*垂直居中*/
   justify-content: center;/*水平居中*/
-  background: rgb(172, 223, 152);
+  background-size: 100% 100%;
 }
 
 .xx-btn {
@@ -23,6 +23,7 @@
   margin-top: 100rpx;
   width: 500rpx;
   border-radius: 30px;
+  background: rgb(128, 192, 165);
 }
 
 .compositeImg::after {
@@ -32,14 +33,13 @@
 .gacha {
   display:flex;
   justify-content: center;
-  background: white;
-  height: 480rpx;
+  /* background: white; */
+  height: 520rpx;
 }
 
-.gacga image {
-  height: 480rpx;
-  width: 480rpx;
-  border: 10rpx solid white;
+.gacha-img {
+  height: 500rpx;
+  width: 520rpx;
 }
 
 .notMove {

@@ -30,7 +30,7 @@ Page({
     randomBackPick();
     setTimeout((function callback(){
       this.setData({ isDisplay: 'none'});
-    }).bind(this), 1000);
+    }).bind(this), 2000);
 
     this.setData({
       aaaa: app.globalData.avatarImg[app.globalData.currentAvatar - 1]
