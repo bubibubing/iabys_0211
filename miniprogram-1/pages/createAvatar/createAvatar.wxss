@@ -138,7 +138,7 @@
   height: 10rem; */
   text-align: center;
   position: relative;
-  margin-top:100rpx;
+  margin: 40rpx;
   border:yellowgreen 1px solid;
   width:480rpx;
   height:480rpx;
