@@ -203,8 +203,9 @@ Page({
       that.draw()
       return
     }
-    that.draw();
-    return
+    //  that.ctx.drawImage(that.data.bgsrc, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+    // that.draw();
+    // return
     // that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
     // that.draw()
     // 有头像框则继续执行
@@ -224,6 +225,61 @@ Page({
         })
       }
     })
+
+    // wx.getImageInfo({
+    //   src: borderImg,
+    //   success: function(result) {
+    //         console.log('result', result)
+    //         that.ctx.drawImage(result.path, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+    //         // 开始生成
+    //         that.draw()
+    //       },fail: function() {
+    //             wx.hideLoading()
+    //             wx.showModal({
+    //               title: '提示',
+    //               content: '无法下载头像框',
+    //             })
+    //           }
+    // })
+    // ({
+    //   url: borderImg,
+    //   success: function(result) {
+    //     console.log('result', result)
+    //     that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+    //     // 开始生成
+    //     that.draw()
+    //   },
+    //   fail: function() {
+    //     wx.hideLoading()
+    //     wx.showModal({
+    //       title: '提示',
+    //       content: '无法下载头像框',
+    //     })
+    //   }
+    // })
+
+    //  wx.chooseImage({
+    //   count: 1,
+    //   sizeType: ['compressed', 'original'],
+    //   sourceType: ['album'],
+    //   success: (res) => {
+    //     var tempFilePaths = res.tempFilePaths
+    //     console.log(tempFilePaths);
+    //     this.setData({
+    //       isShowContainer: true,
+    //       backgroundImgSrc: tempFilePaths,
+    //     })
+
+    //     // 滚动到预览区域
+    //     wx.pageScrollTo({
+    //       selector: "#avatarPreview",
+    //     })
+
+    //     this.resetOffset();
+    //   }
+    // })
+  // },
+
   },
   /**
    * 画用户头像
