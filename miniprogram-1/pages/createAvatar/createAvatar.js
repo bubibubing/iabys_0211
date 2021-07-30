@@ -60,6 +60,7 @@ Page({
     }
     return false;
   },
+
   upload() {
     wx.chooseImage({
       count: 1, // 默认9
@@ -103,7 +104,7 @@ Page({
   },
   onLoad(option) {
     var that = this;
-    console.log(app.globalData.avatarImgList)
+    // console.log(app.globalData.avatarImgList)
     // var bgcss = app.globalData.toubgsrc.substr(14, 2);
     // console.log(bgcss)
     that.setData({
