@@ -161,7 +161,7 @@
 }
 
 .block{
- margin-top: 100rpx;
+ margin-top: 40rpx;
  align-items: center;
  display: flex;
  justify-content: center;
@@ -216,3 +216,6 @@ text{
   height: 200rpx;
 }
 
+.compositeImg {
+  margin-top: 40rpx;
+}

@@ -20,7 +20,7 @@
 }
 
 .compositeImg {
-  margin-top: 100rpx;
+  margin-top: 50rpx;
   width: 500rpx;
   border-radius: 30px;
   background: rgb(128, 192, 165);
@@ -38,7 +38,7 @@
 }
 
 .gacha-img {
-  height: 500rpx;
+  height: 597rpx;
   width: 520rpx;
 }
 
@@ -97,7 +97,6 @@
 .container {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
 }
 
 .avatar-container {
@@ -260,3 +259,30 @@ scroll-view {
 }
 
 
+
+
+.scroll-wrap {
+  width: 90%;
+  box-sizing: border-box;
+}
+.scroll {
+  height: 150rpx;
+  box-sizing: border-box;
+}
+.scroll-x {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.scroll-item {
+  /* width: 138rpx; */
+  /* height: 150rpx;
+  width:150rpx; */
+  display: inline-block;
+  margin-right: 10rpx;
+  padding:0 10rpx 2rpx;
+  font-size: 24rpx;
+  color: #4e4e4e;
+  font-family: PingFangSC-Regular, PingFang SC;
+}

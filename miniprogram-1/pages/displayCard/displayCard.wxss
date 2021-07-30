@@ -29,8 +29,8 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  height: 480rpx;
-  width: 480rpx;
+  height: 597rpx;
+  width: 520rpx;
 }
 
 .gachaShowCard {
@@ -45,7 +45,7 @@
 
 .flip-btn {
   margin-top: 100rpx;
-  width: 520;
+  width: 520rpx;
   border-radius:30px;
   background: rgb(128, 192, 165);
 }
