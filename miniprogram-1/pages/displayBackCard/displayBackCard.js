@@ -109,7 +109,7 @@ Page({
 
   compositeAvatarm() {
     wx.redirectTo({
-      url: '../createBase/createBase'
+      url: '../createAvatar/createAvatar'
     })
   }
 })

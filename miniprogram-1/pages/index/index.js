@@ -79,8 +79,8 @@ Page({
   },
 
   createAva() {
-    wx.navigateTo({
-      url: '../createBase/createBase'
+    wx.redirectTo({
+      url: '../createAvatar/createAvatar'
     })
   },
   //bindscroll事件

@@ -38,3 +38,59 @@ page {
 .flip-btn::after {
   border: none; 
 }
+
+.scroll-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  background:transparent
+}
+.scroll {
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: 50rpx;
+  background-color: transparent;
+}
+.scroll-x {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.scroll-item {
+  /* width: 138rpx; */
+  height: 120rpx;
+  width: 120rpx;
+  display: inline-block;
+  margin:20rpx;
+  /* margin-right: 20rpx; */
+  font-size: 24rpx;
+  background-color: transparent;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+.scroll-bar {
+  background: #ffffff;
+}
+.scroll-bar__bg {
+  position: relative;
+  width: 200rpx;
+  height: 6rpx;
+  background: #d4d8dd;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.scroll-bar__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(233, 89, 14, 1);
+  border-radius: 5px;
+}
+
+.compositeImg {
+  margin-top: 100rpx;
+  width: 500rpx;
+  border-radius: 30px;
+  background: rgb(128, 192, 165);
+}

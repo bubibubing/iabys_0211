@@ -138,10 +138,14 @@
   height: 10rem; */
   text-align: center;
   position: relative;
-  margin:auto;
+  margin-top:100rpx;
   border:yellowgreen 1px solid;
   width:480rpx;
   height:480rpx;
+  padding:0rpx;
+  /* justify-content: center;
+  display: flex;
+  align-items: center; */
 }
 .hidden-canvas{
   position:fixed;
@@ -154,12 +158,13 @@
   padding: 10 rpx;
   align-items: center;
   justify-content: center;
-
 }
 
-.button-row{
-  display: flex;
-  flex-direction: row;
+.block{
+ margin-top: 100rpx;
+ align-items: center;
+ display: flex;
+ justify-content: center;
 }
 
 .create-btn{
@@ -200,52 +205,14 @@ scroll-view {
   white-space: nowrap; 
 }
 
+text{
+  font-size: large;
+  color:white;
+}
 
-
-
-.scroll-wrap {
-  width: 100%;
-  box-sizing: border-box;
-  background: #ffffff;
-}
-.scroll {
-  height: 100%;
-  box-sizing: border-box;
-}
-.scroll-x {
-  display: flex;
-  width: 100%;
-  white-space: nowrap;
-  overflow-x: auto;
-}
-.scroll-item {
-  /* width: 138rpx; */
-  height: 8rem;
-  width:8rem;
-  display: inline-block;
-  margin-right: 10rpx;
-  padding: 0 24rpx 27rpx;
-  font-size: 24rpx;
-  color: #4e4e4e;
-  font-family: PingFangSC-Regular, PingFang SC;
-}
-.scroll-bar {
-  background: #ffffff;
-}
-.scroll-bar__bg {
-  position: relative;
+.addBtn{
+  margin-top: 140rpx;
   width: 200rpx;
-  height: 6rpx;
-  background: #d4d8dd;
-  border-radius: 5px;
-  margin: 0 auto;
-  overflow: hidden;
+  height: 200rpx;
 }
-.scroll-bar__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: rgba(233, 89, 14, 1);
-  border-radius: 5px;
-}
+

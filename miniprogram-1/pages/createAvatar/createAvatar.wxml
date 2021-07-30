@@ -1,58 +1,39 @@
 <!--pages/createAvatar/createAvatar.wxml-->
 <!--madeph.wxml-->
 <!--合成生产头像页-->
-<view class="container" style="background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
+<view class="container"
+  style="background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
   <view class="create-avatar-page">
     <view class='bg' bindtap="upload">
-      <view wx:if="{{!src}}">点击上传照片</view>
+    <!-- <view>{{!src}}</view> -->
+    <image class="addBtn" wx:if="{{!src}}" src="{{addBtn}}"></image>
+      <!-- <view class="text" wx:if="{{!src}}">点击上传照片</view> -->
       <image src="{{src}}" class="avatar"></image>
       <image src="{{bgsrc}}" class="bgcss">
       </image>
     </view>
     <view class="">
-      <button class=' flip-button create-btn' bindtap='savePhoto'>生成头像</button>
-      <button class=' flip-button create-btn' bindtap='continue'>继续抽卡</button>
+      <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
+      <button class='compositeImg' bindtap='continue'>继续抽卡</button>
     </view>
-  </view>
-  <view class="border-title">
-    <view>点击选择一张你喜欢的头像框啦!</view>
-    <view wx:if="{{title}}">{{title}}</view>
-  </view>
-
-  <!-- <scroll-view style="padding:10px" scroll-x="true" show-scrollbar="true" class="select-border-page">
-    <view class="border-img-con" wx:for="{{borderArrImgs}}" wx:key="{{borderImgIndex}}"
-      wx:for-index="{{borderImgIndex}}" data-url="{{item}}" bindtap="selectBorder">
-      <image class="border-img" src="{{item}}"></image>
-    </view>
-  </scroll-view> -->
-  <!-- 滚动条区域 -->
-  <!-- <view class="scroll-bar">
-        <view class="scroll-bar__bg">
-        <view class="scroll-bar__slide" style="width: {{barW}}rpx;left:{{percent}}rpx"></view>
+    <view class="scroll-wrap block">
+      <text wx:if="{{!hasBorder}}" style="color:white;font-size: 50rpx">你还没有头像框哟，请返回抽卡</text>
+      <scroll-view wx:if="{{hasBorder}}" scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll"
+        class="scroll scroll-x" scroll-left="{{scrollLeft}}">
+        <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"
+          wx:if="{{item.hasAvatar}}" data-url="{{item.url}}">
+          <image class="border-img" src="{{item.url}}" mode=""></image>
         </view>
-    </view> -->
-
-
-
-  <view class="scroll-wrap">
-    <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
-      scroll-left="{{scrollLeft}}">
-      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"
-        wx:if="{{item.hasAvatar}}" data-url="{{item.url}}">
-        <image class="border-img" src="{{item.url}}" mode=""></image>
-        <view>{{item.hasAvatar}}</view>
+      </scroll-view>
+    </view>
+    <!-- 滚动条区域 -->
+    <view wx:if="{{hasBorder}}" class="scroll-bar">
+      <view class="scroll-bar__bg">
+        <view class="scroll-bar__slide" style="width: {{barW}}rpx;left:{{percent}}rpx"></view>
       </view>
-    </scroll-view>
-  </view>
-  <!-- 滚动条区域 -->
-  <view class="scroll-bar">
-    <view class="scroll-bar__bg">
-      <view class="scroll-bar__slide" style="width: {{barW}}rpx;left:{{percent}}rpx"></view>
     </view>
   </view>
 </view>
-
-
 <view class="hidden-canvas">
   <canvas canvas-id="canvas" style="width: {{canvas.width}}px;height: {{canvas.height}}px"></canvas>
 </view>
