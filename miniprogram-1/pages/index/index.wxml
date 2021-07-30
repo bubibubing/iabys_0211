@@ -10,7 +10,6 @@
       <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"
         wx:if="{{item.hasAvatar}}" data-url="{{item.url}}">
         <image class="border-img" src="{{item.url}}" mode=""></image>
-        <view>{{item.hasAvatar}}</view>
       </view>
     </scroll-view>
   </view>

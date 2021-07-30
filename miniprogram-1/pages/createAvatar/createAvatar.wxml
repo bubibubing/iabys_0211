@@ -12,10 +12,6 @@
       <image src="{{bgsrc}}" class="bgcss">
       </image>
     </view>
-    <view class="">
-      <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
-      <button class='compositeImg' bindtap='continue'>继续抽卡</button>
-    </view>
     <view class="scroll-wrap block">
       <text wx:if="{{!hasBorder}}" style="color:white;font-size: 50rpx">你还没有头像框哟，请返回抽卡</text>
       <scroll-view wx:if="{{hasBorder}}" scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll"
@@ -32,6 +28,12 @@
         <view class="scroll-bar__slide" style="width: {{barW}}rpx;left:{{percent}}rpx"></view>
       </view>
     </view>
+    <view class="">
+      <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
+      <button class='compositeImg' bindtap='continue'>继续抽卡</button>
+    </view>
+
+
   </view>
 </view>
 <view class="hidden-canvas">
