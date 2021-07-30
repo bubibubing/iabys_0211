@@ -1,18 +1,9 @@
 <!--index.wxml-->
 <view class="container" style="background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
   <view class="gacha">
-    <image class="gacha-img notMove" src="https://s1.imagehub.cc/images/2021/07/29/01454f18e967a23414.png" bindtap="start"></image>
+    <image class="gacha-img notMove" src="https://s1.imagehub.cc/images/2021/07/30/_202107301911541ed736da8bc5e114.png" bindtap="start"></image>
   </view>
 
-
-  <!-- <view class="scroll-wrap">
-    <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
-      scroll-left="{{scrollLeft}}">
-      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"  data-url="{{item}}">
-        <image class="border-img" src="{{item}}" mode=""></image>
-      </view>
-    </scroll-view>
-  </view> -->
   <view class="scroll-wrap">
     <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
       scroll-left="{{scrollLeft}}">

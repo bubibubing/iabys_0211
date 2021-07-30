@@ -1,7 +1,7 @@
 <!--miniprogram-1/pages/displayCard/displayCard.wxml-->
 <view class="showCardPage" style="background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
   <view class="gachaShowGif" style="display:{{isDisplay}}; background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
-    <image src="https://s1.imagehub.cc/images/2021/07/29/5301aaf4665d4ea199af6c970c1b324f5e754505633b2342.gif"></image>
+    <image src="https://s1.imagehub.cc/images/2021/07/30/1f666f38e8584c9f5.gif"></image>
   </view>
   
   <view class="gachaShowCard" style="display:{{isCardFrontDisplay}}">

@@ -26,7 +26,7 @@ App({
     'https://s1.imagehub.cc/images/2021/07/26/avatar6d32e70baac12ecb4.png', 
     'https://s1.imagehub.cc/images/2021/07/26/avatar74315177b763269e6.png',
     'https://s1.imagehub.cc/images/2021/07/26/avatar8e7753088e257698d.png',
-    'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png'],
+    'https://s1.imagehub.cc/images/2021/07/30/-101e2e89be6cffbd0b.png'],
     avatarImgList: [{url:'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341642076c0237386929f77.png', hasAvatar:false},
     {url:'https://s1.imagehub.cc/images/2021/07/25/mmexport162720341424626d53a553082c1f7.png', hasAvatar:false},
      {url:'https://s1.imagehub.cc/images/2021/07/25/mmexport1627203411540fbd0fbb61c09ecac.png', hasAvatar:false},
@@ -35,6 +35,6 @@ App({
      {url:'https://s1.imagehub.cc/images/2021/07/26/avatar6d32e70baac12ecb4.png', hasAvatar:false}, 
      {url:'https://s1.imagehub.cc/images/2021/07/26/avatar74315177b763269e6.png', hasAvatar:false},
      {url:'https://s1.imagehub.cc/images/2021/07/26/avatar8e7753088e257698d.png', hasAvatar:false},
-     {url:'https://s1.imagehub.cc/images/2021/07/25/avatar16688ed196e42024a.png', hasAvatar:false}]
+     {url:'https://s1.imagehub.cc/images/2021/07/30/-101e2e89be6cffbd0b.png', hasAvatar:false}]
   }
 })
