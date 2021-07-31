@@ -286,3 +286,32 @@ scroll-view {
   color: #4e4e4e;
   font-family: PingFangSC-Regular, PingFang SC;
 }
+
+
+.start-tip {
+  display: inline-block;
+  font-size: 30rpx;
+  color:  #8fd18d;
+}
+
+.goods {
+  width: 50%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.goods .start-tip {
+  animation: myfirst 2s infinite;
+}
+
+@keyframes myfirst {
+  0% {
+      transform: translate(0px, 0px);
+  }
+  50% {
+      transform: translate(0px, -10px);
+  }
+  100% {
+      transform: translate(0px, 0px);
+  }
+}

@@ -5,7 +5,6 @@
     "pages/displayCard/displayCard",
     "pages/displayBackCard/displayBackCard",
     "pages/createAvatar/createAvatar",
-    "pages/createBase/createBase",
     "pages/upload/upload",
     "pages/select/select"
   ],

@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container" style="background-image: url('https://s1.imagehub.cc/images/2021/07/29/backdf9a06079c5f5f63.png')">
+<view class="goods">
+  <text class="start-tip">↓ 按下扭蛋机开始抽卡 ↓</text>
+</view>
   <view class="gacha">
     <image class="gacha-img notMove" src="https://s1.imagehub.cc/images/2021/07/30/_202107301911541ed736da8bc5e114.png" bindtap="start"></image>
   </view>
@@ -15,6 +18,6 @@
   </view>
   
   <button class="compositeImg" bindtap="createAva">
-    合成头像
+    先抽卡再合成头像
   </button>
 </view>
