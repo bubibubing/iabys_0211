@@ -14,10 +14,10 @@
     </view>
     <view class="">
       <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
+      <button class='compositeImg' bindtap='savePoster'>生成海报</button>
       <button class='compositeImg' bindtap='continue'>继续抽卡</button>
     </view>
     <view class="scroll-wrap block">
-      <text wx:if="{{!hasBorder}}" style="color:white;font-size: 50rpx">你还没有头像框哟，请返回抽卡</text>
       <scroll-view wx:if="{{hasBorder}}" scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll"
         class="scroll scroll-x" scroll-left="{{scrollLeft}}">
         <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"

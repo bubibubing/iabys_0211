@@ -19,17 +19,6 @@
   border: none;
 }
 
-.compositeImg {
-  margin-top: 50rpx;
-  width: 500rpx;
-  border-radius: 30px;
-  background: rgb(128, 192, 165);
-}
-
-.compositeImg::after {
-  border: none; 
-}
-
 .gacha {
   display:flex;
   justify-content: center;

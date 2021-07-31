@@ -16,8 +16,4 @@
       </view>
     </scroll-view>
   </view>
-  
-  <button class="compositeImg" bindtap="createAva">
-    先抽卡再合成头像
-  </button>
 </view>

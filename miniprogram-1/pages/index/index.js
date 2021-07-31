@@ -75,11 +75,6 @@ Page({
     wx.redirectTo({ url: '../displayCard/displayCard' })
   },
 
-  createAva() {
-    wx.redirectTo({
-      url: '../createAvatar/createAvatar'
-    })
-  },
   //bindscroll事件
   spikeScroll(e) {
     let barW = (200/e.detail.scrollWidth)*wx.getSystemInfoSync().windowWidth
