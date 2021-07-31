@@ -10,7 +10,7 @@
   <view class="scroll-wrap">
     <scroll-view scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll" class="scroll scroll-x"
       scroll-left="{{scrollLeft}}">
-      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" bindtap="selectBorder"
+      <view class="scroll-item index-nav" wx:for="{{borderArrImgs}}" wx:key="catId" 
         wx:if="{{item.hasAvatar}}" data-url="{{item.url}}">
         <image class="border-img" src="{{item.url}}" mode=""></image>
       </view>

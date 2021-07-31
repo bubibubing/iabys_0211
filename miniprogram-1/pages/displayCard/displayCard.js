@@ -4,9 +4,13 @@ const app = getApp();
 function randomBackPick(){
   var n1 = Math.floor(Math.random()*10+1);
   var n2 = Math.floor(Math.random()*10+1);
+
   if(n1 <= 8){
     app.globalData.hasQuestion = true;
     app.globalData.questionNo = n2;
+  } else {
+    app.globalData.hasQuestion = false;
+    app.globalData.questionN = null;
   }
 }
 
@@ -19,7 +23,7 @@ Page({
     isDisplay: 'block',
     isCardFrontDisplay: 'flex',
     isCardBackDisplay: 'none',
-    aaaa: ''
+    getAva: ''
 
   },
 
@@ -33,58 +37,9 @@ Page({
     }).bind(this), 2000);
 
     this.setData({
-      aaaa: app.globalData.avatarImg[app.globalData.currentAvatar - 1]
+      getAva: app.globalData.avatarImgList[app.globalData.currentAvatar - 1].url
     })
     app.globalData.avatarImgList[app.globalData.currentAvatar - 1].hasAvatar = true
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   },
 
   flipCard() {

@@ -90,7 +90,7 @@ Page({
   },
 
   returnHome() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../index/index'
     })
   },

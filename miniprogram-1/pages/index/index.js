@@ -29,19 +29,18 @@ Page({
   },
   // 事件处理函数
   bindViewTap() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../logs/logs'
     })
   },
 
   onLoad() {
     randomPick();
-    if (wx.getUserProfile) {
-      this.setData({
-        borderArrImgs: app.globalData.avatarImgList,
-        canIUseGetUserProfile: true
-      })
-    }
+
+    this.setData({
+      borderArrImgs: app.globalData.avatarImgList
+    })
+
   },
 
   onHide() {
@@ -73,7 +72,7 @@ Page({
   },
 
   start() {
-    wx.navigateTo({ url: '../displayCard/displayCard' })
+    wx.redirectTo({ url: '../displayCard/displayCard' })
   },
 
   createAva() {

@@ -5,7 +5,7 @@
   </view>
   
   <view class="gachaShowCard" style="display:{{isCardFrontDisplay}}">
-    <image src="{{aaaa}}"></image>
+    <image src="{{getAva}}"></image>
   </view>
 
   <button class="flip-btn" bindtap="flipCard">翻转卡片</button>
