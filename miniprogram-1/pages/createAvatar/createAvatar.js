@@ -45,8 +45,7 @@ Page({
     borderArrImgs: app.globalData.avatarImgList,
     avatar: '',
     addBtn: '/images/add.png',
-    existAvatars: '',
-    posterUrl: './../../images/6381627763655_.pic.jpg',
+    existAvatars: ''
   },
   // getImgList(){
   //   app.globalData['has']
@@ -426,7 +425,7 @@ Page({
   downloadPoster() {
     var that = this
     wx.downloadFile({
-      url: 'https://img.wenhairu.com/images/2021/08/01/9hq90.jpg',
+      url: 'https://img.wenhairu.com/images/2021/08/01/9hF0U.jpg',
       success: function (result) {
         // console.log('result', result)
         that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
