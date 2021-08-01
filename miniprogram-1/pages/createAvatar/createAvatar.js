@@ -78,8 +78,7 @@ Page({
   },
   selectBorder(e) {
     var that = this
-
-    console.log(e.currentTarget.dataset)
+    // console.log(e.currentTarget.dataset)
     if (!e.currentTarget.dataset.url) {
       wx.showModal({
         title: '提示',
@@ -148,7 +147,7 @@ Page({
   },
   //bindscroll事件
   spikeScroll(e) {
-    console.log(e.detail)
+    // console.log(e.detail)
     let barW = (200 / e.detail.scrollWidth) * wx.getSystemInfoSync().windowWidth
     this.setData({
       barW: barW,
@@ -341,7 +340,7 @@ Page({
       success(res) {
         wx.hideLoading()
         that.ctx = null
-        console.log(res)
+        // console.log(res)
         that.setData({
           imageBill: res.tempFilePath
         })
@@ -397,13 +396,13 @@ Page({
         })
         that.ctx.setFillStyle(that.data.canvas.background)
         that.ctx.fillRect(0, 0, that.data.canvas.width, that.data.canvas.height)
-        // that.downloadPoster()
-        that.ctx.drawImage(that.data.posterUrl, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
-        // posterImg = that.data.posterUrl
-        that.draw();
-        setTimeout(() => {
-        wx.hideLoading()
-        }, 500);
+        that.downloadPoster()
+        // that.ctx.drawImage(that.data.posterUrl, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+        // // posterImg = that.data.posterUrl
+        // that.draw();
+        // setTimeout(() => {
+        // wx.hideLoading()
+        // }, 500);
       }
     })
 
@@ -426,15 +425,15 @@ Page({
   },downloadPoster(){
     var that = this
     wx.downloadFile({
-      url: 'https://img.wenhairu.com/images/2021/07/31/9Lh7B.png',
+      url: 'https://img.wenhairu.com/images/2021/08/01/9hq90.jpg',
       success: function (result) {
-        console.log('result', result)
+        // console.log('result', result)
         that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
         // 开始生成
+        wx.hideLoading()
         that.draw()
       },
       fail: function () {
-        wx.hideLoading()
         wx.showModal({
           title: '提示',
           content: '无法下载头像框',
