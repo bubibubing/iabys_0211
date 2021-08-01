@@ -14,7 +14,7 @@
     </view>
     <view class="">
       <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
-      <button class='compositeImg' bindtap='savePoster'>生成海报</button>
+      <button class='compositeImg' bindtap='savePoster'>生成分享二维码</button>
       <button class='compositeImg' bindtap='continue'>继续抽卡</button>
     </view>
     <view class="scroll-wrap block">
