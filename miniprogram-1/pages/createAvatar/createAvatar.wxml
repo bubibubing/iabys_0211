@@ -12,11 +12,6 @@
       <image src="{{bgsrc}}" class="bgcss">
       </image>
     </view>
-    <view class="">
-      <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
-      <button class='compositeImg' bindtap='savePoster'>生成分享二维码</button>
-      <button class='compositeImg' bindtap='continue'>继续抽卡</button>
-    </view>
     <view class="scroll-wrap block">
       <scroll-view wx:if="{{hasBorder}}" scroll-x="true" scroll-with-animation="true" bindscroll="spikeScroll"
         class="scroll scroll-x" scroll-left="{{scrollLeft}}">
@@ -31,6 +26,11 @@
       <view class="scroll-bar__bg">
         <view class="scroll-bar__slide" style="width: {{barW}}rpx;left:{{percent}}rpx"></view>
       </view>
+    </view>
+    <view class="btnArea">
+      <button class='compositeImg' bindtap='savePhoto'>生成头像</button>
+      <button class='compositeImg' bindtap='savePoster'>生成分享二维码</button>
+      <button class='compositeImg' bindtap='continue'>继续抽卡</button>
     </view>
   </view>
 </view>
