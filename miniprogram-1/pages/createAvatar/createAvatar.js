@@ -111,7 +111,7 @@ Page({
       bgsrc: app.globalData.toubgsrc,
       borderArrImgs: app.globalData.avatarImgList,
       hasBorder: that.hasBorder(),
-      src: app.globalData.photo?app.globalData.photo:'',
+      src: app.globalData.photo ? app.globalData.photo : '',
       // bgcss:bgcss
     });
     // console.log(that.data.bgsrc);
@@ -371,11 +371,11 @@ Page({
     let that = this
     that.ctx = wx.createCanvasContext(that.data.canvasId)
     wx.showLoading({
-      title: '正在生成头像',
+      title: '正在生成二维码海报',
       mask: true
     })
     wx.getSystemInfo({
-      
+
       success: (systemInfo) => {
         // 屏幕宽度
         let screenWidth = systemInfo.screenWidth
@@ -422,7 +422,8 @@ Page({
     //     })
     //   }
     // })
-  },downloadPoster(){
+  },
+  downloadPoster() {
     var that = this
     wx.downloadFile({
       url: 'https://img.wenhairu.com/images/2021/08/01/9hq90.jpg',
@@ -430,8 +431,10 @@ Page({
         // console.log('result', result)
         that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
         // 开始生成
-        wx.hideLoading()
         that.draw()
+        setTimeout(() => {
+          wx.hideLoading()
+        }, 1000);
       },
       fail: function () {
         wx.showModal({
