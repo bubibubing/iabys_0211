@@ -26,6 +26,7 @@ App({
      {url:'https://img.wenhairu.com/images/2021/07/31/9Lr9C.png', hasAvatar:false}, 
      {url:'https://img.wenhairu.com/images/2021/07/31/9L36S.png', hasAvatar:false},
      {url:'https://img.wenhairu.com/images/2021/07/31/9LsVt.png', hasAvatar:false},
-     {url:'https://img.wenhairu.com/images/2021/07/31/9LiyD.png', hasAvatar:false}]
+     {url:'https://img.wenhairu.com/images/2021/07/31/9LiyD.png', hasAvatar:false}],
+     photo:'',
   }
 })

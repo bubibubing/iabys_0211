@@ -37,4 +37,7 @@
 <view class="hidden-canvas">
   <canvas canvas-id="canvas" style="width: {{canvas.width}}px;height: {{canvas.height}}px"></canvas>
 </view>
+<view class="hidden-canvas">
+  <canvas canvas-id="posterCanvas" style="width: {{canvas.width}}px;height: {{canvas.height}}px"></canvas>
+</view>
 <!--author:马小帅.-->

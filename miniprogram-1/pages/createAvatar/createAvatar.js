@@ -19,8 +19,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    percent: 0,       //滚动条距离左边的距离
-    barW: 0,          //滚动条的宽度
+    percent: 0, //滚动条距离左边的距离
+    barW: 0, //滚动条的宽度
     src: '',
     bgsrc: '',
     hasBorder: '',
@@ -41,22 +41,23 @@ Page({
     screenWidth: '',
     distributionCode: '',
     imageBill: '',
-    isWeChatAvatarUrl:false, // true微信头像   false自定义头像
+    isWeChatAvatarUrl: false, // true微信头像   false自定义头像
     borderArrImgs: app.globalData.avatarImgList,
-    avatar:'',
-    addBtn:'/images/add.png',
-    existAvatars:'',
+    avatar: '',
+    addBtn: '/images/add.png',
+    existAvatars: '',
+    posterUrl: './../../images/6381627763655_.pic.jpg',
   },
   // getImgList(){
   //   app.globalData['has']
   // },
   //选择用户自己头像图片
-  hasBorder(){
+  hasBorder() {
     var that = this;
     for (var i = 0; i < app.globalData.avatarImgList.length; i++) {
-     if(app.globalData.avatarImgList[i].hasAvatar){
-       return true;
-     }
+      if (app.globalData.avatarImgList[i].hasAvatar) {
+        return true;
+      }
     }
     return false;
   },
@@ -110,7 +111,8 @@ Page({
     that.setData({
       bgsrc: app.globalData.toubgsrc,
       borderArrImgs: app.globalData.avatarImgList,
-      hasBorder: that.hasBorder()
+      hasBorder: that.hasBorder(),
+      src: app.globalData.photo?app.globalData.photo:'',
       // bgcss:bgcss
     });
     // console.log(that.data.bgsrc);
@@ -122,6 +124,7 @@ Page({
       that.setData({
         src: avatar
       });
+      app.globalData.photo = avatar;
     }
   },
   continue () {
@@ -161,7 +164,8 @@ Page({
     // 开始绘制头像
     that.init()
 
-  },init() {
+  },
+  init() {
     let that = this
     that.ctx = wx.createCanvasContext(that.data.canvasId)
     wx.getSystemInfo({
@@ -196,7 +200,7 @@ Page({
   drawAvatarBorderImage() {
     let that = this
     let borderImg = that.data.bgsrc
-    console.log(borderImg)
+    // console.log(borderImg)
 
     // 没有头像框
     if (!borderImg) {
@@ -204,21 +208,16 @@ Page({
       that.draw()
       return
     }
-    //  that.ctx.drawImage(that.data.bgsrc, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
-    // that.draw();
-    // return
-    // that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
-    // that.draw()
     // 有头像框则继续执行
     wx.downloadFile({
       url: borderImg,
-      success: function(result) {
+      success: function (result) {
         console.log('result', result)
         that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
         // 开始生成
         that.draw()
       },
-      fail: function() {
+      fail: function () {
         wx.hideLoading()
         wx.showModal({
           title: '提示',
@@ -279,7 +278,7 @@ Page({
     //     this.resetOffset();
     //   }
     // })
-  // },
+    // },
 
   },
   /**
@@ -290,43 +289,23 @@ Page({
     // let avatarUrl = that.data.userInfo ? that.data.userInfo.avatarUrl : ''
     let avatarUrl = that.data.src;
     console.log(avatarUrl)
-    if(!that.data.src){
+    if (!that.data.src) {
       wx.hideLoading()
       wx.showModal({
         title: '提示',
         content: '请先上传头像',
       })
-    }else if(!that.data.bgsrc){
+    } else if (!that.data.bgsrc) {
       wx.hideLoading()
       wx.showModal({
         title: '提示',
         content: '请先选择头像框',
       })
-    }
-    else if (that.data.src) {
+    } else if (that.data.src) {
       that.ctx.drawImage(that.data.src, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
       // 画头像框
       that.drawAvatarBorderImage()
-    } 
-    // else if (avatarUrl && that.data.isWeChatAvatarUrl) {
-    //   wx.downloadFile({
-    //     url: avatarUrl,
-    //     success: function(result) { 
-    //       console.log('result', result)
-    //       that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
-    //       // 画头像框
-    //       that.drawAvatarBorderImage()
-    //     },
-    //     fail: function() {
-    //       wx.hideLoading()
-    //       wx.showModal({
-    //         title: '提示',
-    //         content: '无法下载头像',
-    //       })
-    //     }
-    //   })
-    // } 
-    else {
+    } else {
       wx.hideLoading()
       wx.showModal({
         title: '提示',
@@ -345,7 +324,7 @@ Page({
     let previewWidth = (750 - this.data.preview.left - this.data.preview.right)
     return previewWidth
   },
-  
+
   draw() {
     let that = this
     that.ctx.draw(false, () => {
@@ -387,6 +366,78 @@ Page({
   toMainPage() {
     wx.redirectTo({
       url: './../index/index'
+    })
+  },
+  savePoster() {
+    let that = this
+    that.ctx = wx.createCanvasContext(that.data.canvasId)
+    wx.showLoading({
+      title: '正在生成头像',
+      mask: true
+    })
+    wx.getSystemInfo({
+      
+      success: (systemInfo) => {
+        // 屏幕宽度
+        let screenWidth = systemInfo.screenWidth
+
+        // 预览图片宽度
+        let previewWidth = that.getPreviewWidth()
+        // 预览图片宽高比
+        let aspectRatio = previewWidth / that.data.preview.height
+
+        // 设置画布尺寸px
+        let canvas = that.data.canvas
+        canvas.width = screenWidth,
+          canvas.height = screenWidth
+        that.setData({
+          screenWidth: screenWidth,
+          aspectRatio: aspectRatio,
+          canvas: canvas
+        })
+        that.ctx.setFillStyle(that.data.canvas.background)
+        that.ctx.fillRect(0, 0, that.data.canvas.width, that.data.canvas.height)
+        // that.downloadPoster()
+        that.ctx.drawImage(that.data.posterUrl, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+        // posterImg = that.data.posterUrl
+        wx.hideLoading()
+        that.draw();
+      }
+    })
+
+    // wx.downloadFile({
+    //   url: posterImg,
+    //   success: function(result) {
+    //     console.log('result', result)
+    //     that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+    //     // 开始生成
+    //     that.draw()
+    //   },
+    //   fail: function() {
+    //     wx.hideLoading()
+    //     wx.showModal({
+    //       title: '提示',
+    //       content: '无法下载海报',
+    //     })
+    //   }
+    // })
+  },downloadPoster(){
+    var that = this
+    wx.downloadFile({
+      url: 'https://img.wenhairu.com/images/2021/07/31/9Lh7B.png',
+      success: function (result) {
+        console.log('result', result)
+        that.ctx.drawImage(result.tempFilePath, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
+        // 开始生成
+        that.draw()
+      },
+      fail: function () {
+        wx.hideLoading()
+        wx.showModal({
+          title: '提示',
+          content: '无法下载头像框',
+        })
+      }
     })
   }
 
