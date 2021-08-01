@@ -400,8 +400,10 @@ Page({
         // that.downloadPoster()
         that.ctx.drawImage(that.data.posterUrl, that.changeSize(0), that.changeSize(0), that.data.screenWidth, that.data.screenWidth)
         // posterImg = that.data.posterUrl
-        wx.hideLoading()
         that.draw();
+        setTimeout(() => {
+        wx.hideLoading()
+        }, 500);
       }
     })
 
